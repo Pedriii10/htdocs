@@ -1,0 +1,386 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.home{
+    position: absolute;
+    top: 0;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+.home .text{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 12px 60px;
+}
+
+.sidebar.close ~ .home{
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+body.dark .home .text{
+    color: var(--text-color);
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    background-color: white;
+    color: black;
+    font-family: Poppins;
+    font-size: 30px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 500px;
+    background-color: white;
+}
+
+.container .nombre-categoria{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 10px 10px 10px 30px;
+    width: 500px;
+    height: 70px;
+    font-size: 45px;
+    color: #0c283b;
+    font-family: Poppins;
+    font-weight: 600;
+}
+
+.nombre-categoria button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: none;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    margin: 10px 10px 10px 30px;
+    border: none;
+    background-color: #0c283b;
+    border-radius: 6px;
+    color: white;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.nombre-categoria button:hover{
+    background-color: #10c541;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .container .nombre-categoria {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+      width: 100%;
+      height: 100px;
+      font-size: 32px;
+    }
+    
+    .nombre-categoria button {
+      width: 100%;
+      height: 40px;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+  }
+
+.caja-productos{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px 20px 50px;
+    background-color: rgb(218, 218, 218);
+    overflow-x: auto;
+    
+}
+
+.caja-productos::-webkit-scrollbar{
+    height: 7px;
+}
+
+.caja-productos::-webkit-scrollbar-thumb{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #10c541;
+    
+}
+
+
+
+
+.producto{
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 270px;
+    height: 350px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 9999;
+    margin: 0px 30px 0px 30px;
+}
+
+.imagen{
+    width: 100%;
+    height: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.imagen img{
+    width: 240px;
+}
+
+
+.botones-editar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+}
+
+.botones-editar button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: #0c283b;
+    color: white;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.botones-editar button:hover{
+    background-color: #10c541;
+    color: white;
+}
+
+.datos{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.datos h3{
+    font-family: Poppins;
+    font-size: 25px;
+    color: #124869;
+}
+
+.carrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 12px 12px 12px;
+}
+
+.carrito button{
+    width: 140px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: #0c283b;
+    color: white;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.carrito button:hover{
+    background-color: #10c541;
+    color: white;
+}
+
+.carrito span{
+    padding-top: 5px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: orange;
+    font-weight: 500;
+}
+
+.nombre-categoria a{
+    text-decoration: none;
+}
+
+.caja-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 600px;
+    border: 1px solid white;
+    border-radius: 6px;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    padding: 20px;
+  }
+
+  .datos-form{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .datos-form h1{
+    position: relative;
+    top: -75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(76, 171, 215);
+    font-family: Poppins;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 35px;
+  }
+
+  .input{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px;
+  }
+
+  .input label{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 740;
+    margin-bottom: 10px;
+    color: rgb(0, 30, 75) ;
+    /*  
+    #6D8FA3
+    #4C728E 
+    #8AA8B7
+    */
+  }
+
+  .input input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #4C728E;
+    outline: none;
+    color: rgb(0, 30, 75);
+    font-weight: bold;
+    font-family: Poppins;
+  }
+
+  .input button{
+    position: relative;
+    top: 80px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #4C728E;
+    color: white;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+  }
+
+  .input button:hover{
+    background-color: white;
+    color: #122335;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .caja-form {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+    .datos-form h1 {
+      font-size: 30px;
+      top: -50px;
+      color: white;
+    }
+    .input button {
+      top: 20px;
+    }
+    .input label {
+        color: white;
+      }
+      .input input {
+        color: white;
+      }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .caja-form {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+    .datos-form h1 {
+      font-size: 25px;
+      top: -10px;
+      color: white;
+    }
+    .input label {
+      font-size: 16px;
+      color: white;
+    }
+    .input input {
+      font-size: 16px;
+      color: white;
+    }
+    .input button {
+      top: 20px;
+      font-size: 18px;
+      height: 40px;
+    }
+  }
+
+  .botones-editar a{
+    text-decoration: none;
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
